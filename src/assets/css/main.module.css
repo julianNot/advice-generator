@@ -3,14 +3,66 @@
 }
 
 .card {
-	height: 330px;
-	width: 544px;
+	height: 280px;
+	width: 450px;
 	display: block;
 	position: absolute;
-	top: calc(50% - 165px);
-	left: calc(50% - 272px);
+	top: calc(50% - 140px);
+	left: calc(50% - 225px);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center; */
+	/* align-items: center; */
+    background-color: #313a49;
+    border-radius: 10px;
+}
+
+.text {
+	font-family: 'Manrope', sans-serif;
+}
+
+.title {
+	font-size: 11px;
+	font-weight: 600;
+	text-align: center;
+	color: #53ffa9;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	letter-spacing: 2.7px;
+}
+
+.body {
+	font-size: 25px;
+	font-weight: 800;
+	text-align: center;
+	color: #cfe3ea;
+	padding: 0;
+	margin: 0 25px;
+	margin-bottom: 25px;
+}
+
+.divider{
+	display: block;
+	margin: auto;
+	width: 85%;
+}
+
+.btn {
+	border: none;
+	background-color: #53ffa9;
+	display: inline-block;
+	height: 55px;
+	width: 55px;
+	border-radius: 100%;
+	align-self: center;
+	background-image: url('../icons/icon-dice.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	bottom: -27.5px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.btn:hover {
+	box-shadow: 0 0 25px #53ffa9;
 }
