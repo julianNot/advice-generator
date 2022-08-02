@@ -1,0 +1,16 @@
+.container {
+	position: relative;
+}
+
+.card {
+	height: 330px;
+	width: 544px;
+	display: block;
+	position: absolute;
+	top: calc(50% - 165px);
+	left: calc(50% - 272px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
