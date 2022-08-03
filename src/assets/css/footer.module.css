@@ -1,0 +1,16 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 17px;
+	font-weight: 700;
+    text-align: center;
+}
+
+a {
+    color: #cfe3ea;
+}
+
+a:hover {
+    text-shadow: 0 0 5px #cfe3ea;
+}

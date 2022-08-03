@@ -1,14 +1,29 @@
+import { useFetch } from '../hooks/useFetch';
 import main from '../assets/css/main.module.css'
 import divider from '../assets/icons/pattern-divider-desktop.svg'
+import { useEffect, useState } from 'react';
 
-export const Advice = () => {
-	const number = 117
-	const advice = "It is easy to sit up and take notice, what's difficult is getting up and taking action"
+export const Advice = ({ onGetData }) => {
+	const [data, setdata] = useState('')
+	const { id, advice } = data
 
+	const getData = async () => {
+		const resp = await fetch('https://api.adviceslip.com/advice')
+		const data = await resp.json()
+		setdata(data.slip)
+	}
+
+	onGetData(getData) 
+
+
+	useEffect(() => {
+	  getData()
+	}, [])
+	
 	return (
 		<div className={ main.text }>
-			<h2 className={ main.title }>ADVICE # { number }</h2>
-			<p className={ main.body }>" { advice } "</p>
+			<h2 className={ main.title }>ADVICE # { id }</h2>
+			<p className={ main.body }>"{ advice }"</p>
 			<img className={ main.divider } src={ divider } alt="line separation" />
 		</div>
 	);
