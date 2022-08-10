@@ -1,7 +1,7 @@
-import { useFetch } from '../hooks/useFetch';
+import { useEffect, useState } from 'react';
+
 import main from '../assets/css/main.module.css'
 import divider from '../assets/icons/pattern-divider-desktop.svg'
-import { useEffect, useState } from 'react';
 
 export const Advice = ({ onGetData }) => {
 	const [data, setdata] = useState('')
@@ -13,11 +13,9 @@ export const Advice = ({ onGetData }) => {
 		setdata(data.slip)
 	}
 
-	onGetData(getData) 
-
-
 	useEffect(() => {
-	  getData()
+		onGetData.current = getData
+		getData()
 	}, [])
 	
 	return (

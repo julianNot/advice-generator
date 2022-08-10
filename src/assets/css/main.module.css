@@ -3,17 +3,16 @@
 }
 
 .card {
-	height: 280px;
+	min-height: 45%;
 	word-wrap: break-word;
-	width: 450px;
+	width: 90%;
 	display: block;
 	position: absolute;
-	top: calc(50% - 140px);
-	left: calc(50% - 225px);
+	top: 50%;
+	left: 50%;
 	display: flex;
+	transform: translate(-50%, -80%);
 	flex-direction: column;
-	/* justify-content: center; */
-	/* align-items: center; */
     background-color: #313a49;
     border-radius: 10px;
 }
@@ -33,13 +32,13 @@
 }
 
 .body {
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 800;
 	text-align: center;
 	color: #cfe3ea;
 	padding: 0;
-	margin: 0 25px;
-	margin-bottom: 25px;
+	margin: 0 10px;
+	margin-bottom: 18px;
 }
 
 .divider{
@@ -66,4 +65,21 @@
 
 .btn:hover {
 	box-shadow: 0 0 25px #53ffa9;
+}
+
+@media (min-width: 640px) {
+	.card {
+		height: 280px;
+		width: 450px;
+	}
+
+	.body {
+		font-size: 25px;
+		font-weight: 800;
+		text-align: center;
+		color: #cfe3ea;
+		padding: 0;
+		margin: 0 25px;
+		margin-bottom: 25px;
+	}
 }
