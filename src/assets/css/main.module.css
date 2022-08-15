@@ -3,7 +3,7 @@
 }
 
 .card {
-	min-height: 45%;
+	height: auto;
 	word-wrap: break-word;
 	width: 90%;
 	display: block;
@@ -13,12 +13,12 @@
 	display: flex;
 	transform: translate(-50%, -80%);
 	flex-direction: column;
-    background-color: #313a49;
-    border-radius: 10px;
+	background-color: #313a49;
+	border-radius: 10px;
 }
 
 .text {
-	font-family: 'Manrope', sans-serif;
+	font-family: "Manrope", sans-serif;
 }
 
 .title {
@@ -41,9 +41,9 @@
 	margin-bottom: 18px;
 }
 
-.divider{
+.divider {
 	display: block;
-	margin: auto;
+	margin: auto auto 45px auto;
 	width: 85%;
 }
 
@@ -55,7 +55,7 @@
 	width: 55px;
 	border-radius: 100%;
 	align-self: center;
-	background-image: url('../icons/icon-dice.svg');
+	background-image: url("../icons/icon-dice.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	bottom: -27.5px;
@@ -67,10 +67,38 @@
 	box-shadow: 0 0 25px #53ffa9;
 }
 
+.spinner__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner {
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	border-left-color: #09f;
+	margin: 35px 0px 55px 0px;
+
+	animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 @media (min-width: 640px) {
 	.card {
-		height: 280px;
+		height: auto;
 		width: 450px;
+		transform: translate(-50%, -50%);
 	}
 
 	.body {
